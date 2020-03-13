@@ -22,6 +22,8 @@ class DescriptionViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         imageFruta.layer.cornerRadius = self.imageFruta.frame.width/2
+        imageFruta.layer.borderColor = UIColor.black.cgColor
+        imageFruta.layer.borderWidth = 2
         self.imageFruta.image = UIImage(named: fruta)
         self.lblFruta.text = fruta
         
@@ -30,7 +32,6 @@ class DescriptionViewController: UIViewController{
         
         blur.translatesAutoresizingMaskIntoConstraints = false
         blurView.insertSubview(blur, at: 0)
-        
     }
     
     @IBAction func btnBack(_ sender: UIButton) {

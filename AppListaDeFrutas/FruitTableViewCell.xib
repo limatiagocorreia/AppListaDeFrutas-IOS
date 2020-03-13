@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="126" id="KGk-i7-Jjw" customClass="FruitTableViewCell" customModule="AppListaDeFrutas" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FruitTableViewCell" customModule="Lista_de_Frutas" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -17,7 +17,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL7-Jt-ni5">
-                        <rect key="frame" x="80" y="10" width="230" height="60"/>
+                        <rect key="frame" x="80" y="10" width="160" height="60"/>
+                        <color key="backgroundColor" white="0.89840082159624401" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -29,19 +30,38 @@
                             <constraint firstAttribute="width" secondItem="I58-Qj-GyP" secondAttribute="height" multiplier="1:1" id="2MS-9I-O05"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-K4-r5w">
+                        <rect key="frame" x="250" y="10" width="60" height="60"/>
+                        <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="qqw-K4-r5w" secondAttribute="height" multiplier="1:1" id="XBe-zQ-Lku"/>
+                        </constraints>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <state key="normal">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                        <connections>
+                            <action selector="addCart:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Rap-4p-sDK"/>
+                        </connections>
+                    </button>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="qqw-K4-r5w" firstAttribute="leading" secondItem="oL7-Jt-ni5" secondAttribute="trailing" constant="10" id="1lj-iI-2Z6"/>
                     <constraint firstItem="oL7-Jt-ni5" firstAttribute="leading" secondItem="I58-Qj-GyP" secondAttribute="trailing" constant="10" id="9Kr-eZ-Jvp"/>
                     <constraint firstItem="I58-Qj-GyP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="9qo-Kf-HRP"/>
                     <constraint firstItem="oL7-Jt-ni5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ITW-6F-3hJ"/>
                     <constraint firstAttribute="bottom" secondItem="I58-Qj-GyP" secondAttribute="bottom" constant="10" id="MzK-mf-0Vl"/>
+                    <constraint firstAttribute="trailing" secondItem="qqw-K4-r5w" secondAttribute="trailing" constant="10" id="P2y-oG-pVo"/>
                     <constraint firstItem="I58-Qj-GyP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="amZ-d2-9Ry"/>
-                    <constraint firstAttribute="trailing" secondItem="oL7-Jt-ni5" secondAttribute="trailing" constant="10" id="cpF-k5-eVt"/>
+                    <constraint firstAttribute="bottom" secondItem="qqw-K4-r5w" secondAttribute="bottom" constant="10" id="c5s-rx-fhX"/>
                     <constraint firstAttribute="bottom" secondItem="oL7-Jt-ni5" secondAttribute="bottom" constant="10" id="gGg-Q5-HEE"/>
+                    <constraint firstItem="qqw-K4-r5w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="jme-kj-HO1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnAddCart" destination="qqw-K4-r5w" id="D2E-fi-18u"/>
                 <outlet property="lblFruta" destination="oL7-Jt-ni5" id="GZw-s0-R6O"/>
                 <outlet property="miniImageFruta" destination="I58-Qj-GyP" id="9LQ-OA-T5t"/>
             </connections>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x31-CV-Pqw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F4V-z1-Y9J">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,44 +7,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
-        <scene sceneID="KCf-KB-Gp0">
+        <!--View Controller-->
+        <scene sceneID="YTm-Pt-E1b">
             <objects>
-                <tableViewController id="x31-CV-Pqw" customClass="TableViewController" customModule="AppListaDeFrutas" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="W4J-la-MMH">
+                <viewController id="F4V-z1-Y9J" customClass="ViewController" customModule="Lista_de_Frutas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gNm-rS-8XC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UYY-6t-vfI" userLabel="Table View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="y4W-va-SCR" customClass="TableCellFruta" customModule="Lista_de_Frutas" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y4W-va-SCR" id="LZB-0U-GXK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="WwI-LD-D01" customClass="TableCellFruta" customModule="AppListaDeFrutas" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WwI-LD-D01" id="O9G-C3-efa">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="x31-CV-Pqw" id="mpj-yN-80q"/>
-                            <outlet property="delegate" destination="x31-CV-Pqw" id="nb1-gP-CPl"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="fmC-tK-xfa"/>
-                    <size key="freeformSize" width="414" height="896"/>
+                        <constraints>
+                            <constraint firstItem="Cx0-jl-nab" firstAttribute="trailing" secondItem="UYY-6t-vfI" secondAttribute="trailing" id="CmN-Jh-tQY"/>
+                            <constraint firstItem="Cx0-jl-nab" firstAttribute="bottom" secondItem="UYY-6t-vfI" secondAttribute="bottom" id="a6f-Pr-VGO"/>
+                            <constraint firstItem="UYY-6t-vfI" firstAttribute="leading" secondItem="Cx0-jl-nab" secondAttribute="leading" id="j94-lG-UWo"/>
+                            <constraint firstItem="UYY-6t-vfI" firstAttribute="top" secondItem="Cx0-jl-nab" secondAttribute="top" id="ndp-bU-snc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cx0-jl-nab"/>
+                    </view>
                     <connections>
-                        <segue destination="lVY-Ci-9nR" kind="show" identifier="SegueDescription" id="QjK-QN-U8o"/>
+                        <outlet property="tableview" destination="UYY-6t-vfI" id="qjU-Vt-hsH"/>
+                        <segue destination="lVY-Ci-9nR" kind="show" identifier="SegueDescription" id="Wxs-Yg-Zf5"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hzb-BG-dXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAS-Fm-SkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-200" y="-69"/>
+            <point key="canvasLocation" x="-612" y="-190"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="qX4-Fs-ajW">
             <objects>
-                <viewController id="lVY-Ci-9nR" customClass="DescriptionViewController" customModule="AppListaDeFrutas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lVY-Ci-9nR" customClass="DescriptionViewController" customModule="Lista_de_Frutas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wLF-V3-Cbq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +112,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEt-P8-3pi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ydH-cq-KXh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="698.55072463768124" y="-68.303571428571431"/>
+            <point key="canvasLocation" x="480" y="-189"/>
         </scene>
     </scenes>
 </document>
